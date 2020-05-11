@@ -1,18 +1,11 @@
-# '''Trains a simple convnet on the MNIST dataset.
-# Gets to 99.25% test accuracy after 12 epochs
-# (there is still a lot of margin for parameter tuning).
-# 16 seconds per epoch on a GRID K520 GPU.
-# '''
-
 '''
-watch -n0.1 nvidia-smi
+1) to see the runned task on GPU
+$ watch -n0.1 nvidia-smi
 
-
-# ---- wyner: pip ---
-source Python/venv_pip3/common_keras/bin/activate
-cd Python/BIB_EntropyJournal/BIB_Classification
-
-python3 -u train_model_BCE_Dc.py > logs/tarin_model_BIB_Dc_3conv_3dense_no_bn_100_alpha_0_noise_0.3.log &
+2) to run code
+$ source path/to/virtual/environment/bin/activate
+$ cd path/to/code
+$ python3 -u train_model_BCE_Dc.py > logs.log &
 
 '''
 
@@ -43,7 +36,6 @@ print("PID = %d\n" % os.getpid())
 print(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
-# print(os.environ.get('CUDA_PATH'))
 
 # ======================================================================================================================
 
@@ -68,7 +60,7 @@ parser.add_argument("--checkpoint_dir", default="model_BIB_Dc_%dconv_3dense_%sbn
 
 parser.add_argument("--is_supervised_noise",  default=False, type=int, help="...")
 parser.add_argument("--noise_std",            default=0.3, type=float, help="...")
-parser.add_argument("--n_noise_realisations", default=3,  type=int,   help="...")
+parser.add_argument("--n_noise_realisations", default=0,  type=int,   help="...")
 
 parser.add_argument("--runs", default=3,   type=int, help="Runs")
 
@@ -117,7 +109,6 @@ if __name__ == "__main__":
             train_data_unlabel = loadTrainDataWithNoise(batch_size, data_path_="./data", noise_std=args.noise_std, n_noise_realisations=args.n_noise_realisations)
         else:
             train_data_unlabel = loadTrainData(batch_size, data_path_="./data")
-        # train_data_unlabel = loadTrainData(batch_size, data_path_="./data")
 
         if args.supervised_n > 0:
             if args.is_supervised_noise and args.n_noise_realisations > 0:
@@ -125,19 +116,6 @@ if __name__ == "__main__":
                                                            n_noise_realisations=args.n_noise_realisations, n_use_sample=args.supervised_n)
             else:
                 train_data_label = loadTrainData(batch_size, data_path_="./data", n_use_sample=args.supervised_n)
-
-        # fig = plt.figure(figsize=(10, 3))
-        # dr = 2
-        # dc = 4
-        # i = 0
-        #
-        # for ji in range(dr*dc):
-        #     i += 1
-        #     plt.subplot(dr, dc, i)
-        #     plt.imshow(train_data_unlabel.im_list[ji, :, :, 0], cmap='gray')
-        #     plt.colorbar()
-        #     plt.axis('off')
-        # plt.show()
 
         # init model
         unsupervised_x = Input(shape=(28, 28, 1))
@@ -165,6 +143,7 @@ if __name__ == "__main__":
                       metrics=['accuracy'], loss_weights=[1, args.alpha])
 
         # # model scheme visualisation
+        # # only for local computer
         # if is_local:
         #     plot_model(Classifier, to_file="%s/model_scheme.png" % results_dir_, show_shapes=True)
         #     plot_model(Dc, to_file="%s/model_dc_scheme.png" % results_dir_, show_shapes=True)
@@ -218,9 +197,9 @@ if __name__ == "__main__":
                   f"Dc loss = {np.mean(np.asarray(Loss_dc))}")
 
             if epoch % save_each == 0 or epoch == args.epochs:
+                # # to safe full model: architeckture + weights 
                 # model.save("%s/model_bce_epoch_%d" % (checkpoint_dir_, epoch))
+                # # to safe only model's weights (less space)
                 Classifier_model.save_weights("%s/model_epoch_%d" % (checkpoint_dir_, epoch))
                 # Dc_model.save_weights("%s/model_dc_epoch_%d" % (checkpoint_dir_, epoch))
 
-        # # only for local computer
-        # plot_model(model, to_file="%s/model_BCE.png" % results_dir_)
