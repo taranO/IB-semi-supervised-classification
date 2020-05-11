@@ -1,12 +1,11 @@
 '''
-watch -n0.1 nvidia-smi
+1) to see the runned task on GPU
+$ watch -n0.1 nvidia-smi
 
-
-# ---- wyner: pip ---
-source Python/venv_pip3/common_keras/bin/activate
-cd Python/BIB_EntropyJournal/BIB_Classification
-
-python3 -u test_model_BCE.py > logs_test_model_BCE.log &
+2) to run code
+$ source path/to/virtual/environment/bin/activate
+$ cd path/to/code
+$ python3 -u test_model_BCE.py > logs.log &
 
 '''
 
@@ -23,10 +22,6 @@ from keras import backend as K
 from keras.models import load_model
 from keras.models import Model
 from libs.constants import is_local
-# if is_local:
-#     # required:
-#     # sudo apt-get install graphviz
-#     from keras.utils import plot_model # only for local computer
 
 import math
 import numpy as np
