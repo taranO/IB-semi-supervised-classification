@@ -19,9 +19,9 @@ from libs.ModelBN import ModelEncoderBN, ModelDecoderBN
 
 # ======================================================================================================================
 print("PID = %d\n" % os.getpid())
+print(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-print(os.environ.get('CUDA_PATH'))
 
 # ======================================================================================================================
 
