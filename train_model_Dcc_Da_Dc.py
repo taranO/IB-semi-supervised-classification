@@ -39,7 +39,7 @@ parser.add_argument("--weight_decay", default=1e-3, type=float, help="Training w
 parser.add_argument("--batch_size",   default=100,  type=int,   help="Training batch size") # !! must be even 10
 parser.add_argument("--epochs",       default=100,  type=int,   help="Number of training epochs")
 
-parser.add_argument("--checkpoint_dir", default="Dcc_Da_Dc/Dcc_Dz_Dc_%sbn_%s_alpha_a_%s_alpha_c_%s_%snoise_%0.2f_run_%s", type=str, help="Dir where to same models")
+parser.add_argument("--checkpoint_dir", default="Dcc_Da_Dc/Dcc_Dz_Dc_%sbn_%s_alpha_a_%s_alpha_c_%s_%snoise_%0.2f_run_%s", type=str, help="Dir where to store models")
 
 parser.add_argument("--supervised_n", default=100,    type=int, help="The amount of supervised data")
 parser.add_argument("--alpha_a",      default=0.0005, type=float, help="The regularization parameter for Da")
