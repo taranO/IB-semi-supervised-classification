@@ -209,9 +209,9 @@ if __name__ == "__main__":
                 Loss.append(loss)
 
             print(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\t epoch : {epoch}, \t"
-                  f"Class loss = {np.mean(np.asarray(Loss))}\t"
-                  f"Da loss = {np.mean(np.asarray(Loss_Da))}\t"
-                  f"Dc loss = {np.mean(np.asarray(Loss_Dc))}")
+                  f"Dcc = {np.mean(np.asarray(Loss))}\t"
+                  f"Da = {np.mean(np.asarray(Loss_Da))}\t"
+                  f"Dc = {np.mean(np.asarray(Loss_Dc))}")
 
             if epoch % save_each == 0 or epoch == args.epochs:
                 # model.save("%s/model_bce_epoch_%d" % (checkpoint_dir_, epoch))
