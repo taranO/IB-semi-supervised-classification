@@ -7,7 +7,7 @@ In this paper we consider an information bottleneck (IB) framework for semi-supe
 ### Experiments
 
 <p align="center">
-<img src="https://github.com/taranO/IB-semi-supervised-classification/blob/master/data/Appendix_Fig_Dcc.pdf" width="450px" align="center">
+<img src="./readme_data/IB_Dcc.png" width="450px" align="center">
 <br/>
 <br/>
 Fig.1: Supervised training without latent space regularization.  
