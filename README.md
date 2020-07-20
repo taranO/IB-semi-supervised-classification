@@ -63,7 +63,7 @@ In this paper we consider an information bottleneck (IB) framework for semi-supe
 ### Experimental results
 
 <p align="center">
-<img src="./readme_data/IB_results.png" width="750px" align="center">
+<img src="./readme_data/IB_results.png" width="700px" align="center">
 </p>
 
 ### References
