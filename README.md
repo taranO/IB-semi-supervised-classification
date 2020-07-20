@@ -7,6 +7,7 @@ In this paper we consider an information bottleneck (IB) framework for semi-supe
 ### Experiments
 
 #### Supervised training without latent space regularization
+\begin{equation}
  \label{eq:Appendix_HCP_Dcc}
  \loss^{\mathrm{HCP}}_{\mathrm{S-NoReg}}( \btheta_\rmc, \bphi_\rma) = \Dcc. 
 \end{equation}
