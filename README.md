@@ -47,7 +47,7 @@ In this paper we consider an information bottleneck (IB) framework for semi-supe
 <img src="./readme_data/equation_5.png" height="32px" align="center">
 <br/>
 <br/>
-<img src="./readme_data/IB_Dcc_Dc_Dz_Dxx.png" width="525px" align="center">
+<img src="./readme_data/IB_Dcc_Dc_Dz_Dxx.png" width="600px" align="center">
 </p>
 
 #### Semi-supervised training with latent space regularization and adversarial reconstruction
@@ -56,7 +56,7 @@ In this paper we consider an information bottleneck (IB) framework for semi-supe
 <img src="./readme_data/equation_6.png" height="32px" align="center">
 <br/>
 <br/>
-<img src="./readme_data/IB_Dcc_Dc_Dz_Dxx_Dx.png" width="525px" align="center">
+<img src="./readme_data/IB_Dcc_Dc_Dz_Dxx_Dx.png" width="600px" align="center">
 </p>
 
 ### References
