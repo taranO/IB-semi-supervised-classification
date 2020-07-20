@@ -8,7 +8,7 @@ In this paper we consider an information bottleneck (IB) framework for semi-supe
 
 #### Supervised training without latent space regularization
 
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+<img src="https://render.githubusercontent.com/render/math?math={{\mathcal L}^{\mathrm{HCP}}_{\mathrm{S-NoReg}}( {\boldsymbol \theta}_{\mathrm c}, {\boldsymbol \phi}_{\mathrm a}) = {\mathcal{D}_{\mathrm{c} \mathrm{\hat c}}}}">
 
 
 
