@@ -7,9 +7,8 @@ In this paper we consider an information bottleneck (IB) framework for semi-supe
 ### Experiments
 
 #### Supervised training without latent space regularization
-\begin{equation}
- {\mathcal L}^{\mathrm{HCP}}_{\mathrm{S-NoReg}}( {\boldsymbol \theta}_{\mathrm c}, {\boldsymbol \phi}_{\mathrm a}) = {\mathcal{D}_{\mathrm{c} \mathrm{\hat c}}}
-\end{equation}
+
+${\mathcal L}^{\mathrm{HCP}}_{\mathrm{S-NoReg}}( {\boldsymbol \theta}_{\mathrm c}, {\boldsymbol \phi}_{\mathrm a}) = {\mathcal{D}_{\mathrm{c} \mathrm{\hat c}}}$
 
 ### References
 [[1] Durk P Kingma, Shakir Mohamed, Danilo Jimenez Rezende, and Max Welling. "Semi-supervised learning with deep generative models". In Advances in neural information processing systems. 2014.](https://arxiv.org/pdf/1406.5298.pdf)
