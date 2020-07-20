@@ -12,5 +12,3 @@ autoencoders". arXiv preprint arXiv:1511.05644, 2015.](https://arxiv.org/pdf/151
 [[3] Jost Tobias Springenberg. "Unsupervised and semi-supervised learning with categorical generative adversarial
 networks". arXiv preprint arXiv:1511.06390, 2015.](https://arxiv.org/pdf/1511.06390.pdf)
 
-[[4] Alireza Makhzani and Brendan J Frey. "Pixelgan autoencoders". In Advances in Neural Information Processing
-Systems, 2017.](https://arxiv.org/pdf/1706.00531.pdf)
