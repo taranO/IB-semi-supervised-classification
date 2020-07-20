@@ -8,10 +8,55 @@ In this paper we consider an information bottleneck (IB) framework for semi-supe
 #### Supervised training without latent space regularization
 
 <p align="center">
-<img src="./readme_data/equation_1.png" heigh="40px" align="center">
+<img src="./readme_data/equation_1.png" heigh="30px" align="center">
 <br/>
 <br/>
 <img src="./readme_data/IB_Dcc.png" width="450px" align="center">
+</p>
+
+#### Semi-supervised training without latent space regularization
+
+<p align="center">
+<img src="./readme_data/equation_2.png" heigh="25px" align="center">
+<br/>
+<br/>
+<img src="./readme_data/IB_Dcc_Dc.png" width="450px" align="center">
+</p>
+
+#### Supervised training with latent space regularization
+
+<p align="center">
+<img src="./readme_data/equation_3.png" heigh="25px" align="center">
+<br/>
+<br/>
+<img src="./readme_data/IB_Dcc_Da.png" width="450px" align="center">
+</p>
+
+#### Semi-supervised training with latent space regularization
+
+<p align="center">
+<img src="./readme_data/equation_4.png" heigh="25px" align="center">
+<br/>
+<br/>
+<img src="./readme_data/IB_Dcc_Dc_Da.png" width="450px" align="center">
+</p>
+
+#### Semi-supervised training with latent space regularization
+
+<p align="center">
+<img src="./readme_data/equation_5.png" heigh="25px" align="center">
+<br/>
+<br/>
+<img src="./readme_data/IB_Dcc_Dc_Dz_Dxx.png" width="450px" align="center">
+</p>
+
+#### Semi-supervised training with latent space regularization and adversarial reconstruction
+
+<p align="center">
+<img src="./readme_data/equation_6.png" heigh="25px" align="center">
+<br/>
+<br/>
+<img src="./readme_data/IB_Dcc_Dc_Dz_Dxx_Dx.png" width="450px" align="center">
 </p>
 
 ### References
