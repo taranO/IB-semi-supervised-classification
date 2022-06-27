@@ -74,7 +74,7 @@ if __name__ == "__main__":
     printToLog(info)
 
     # === load test data ====================================================================================================
-    test_data = loadTestData(args.batch_size, data_path_="./data")
+    test_data = loadTestData(args.batch_size, data_path_="./IB-semi-supervised-classification/data")
 
     # --- init models -------------------------------------------------------
     unsupervised_x = Input(shape=(28, 28, 1))
